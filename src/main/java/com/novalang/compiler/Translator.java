@@ -317,7 +317,7 @@ public class Translator {
             var line = lines.get(i).trim();
             log.info(format("Parsing line %d: '%s'", i + 1, line));
             if (line.isEmpty() || line.startsWith(";") || line.startsWith("#")) {
-                program.add(null);
+                program.add(null); // it adds a null? TODO: double check if this is how the PC works in this project
                 log.info(format("Added null for empty or comment line at PC %d.", i));
                 continue;
             }
@@ -325,8 +325,8 @@ public class Translator {
             var tokens = line.split("\\s+");
 
             var label = "";
-            String opcode;
-            String[] operandTokens;
+            String opcode; // TODO: I have a feeling this will do the same
+            String[] operandTokens; // TODO: this is not allowing me to run any tests and I can't make it a variable...
 
             // Determine structure: [label] opcode [operands...]
             if (isOpcode(tokens[0])) {
@@ -334,7 +334,10 @@ public class Translator {
                 operandTokens = Arrays.copyOfRange(tokens, 1, tokens.length);
                 log.info(format("Line %d starts with opcode '%s'.", i + 1, opcode));
             } else if (tokens.length > 1 && isOpcode(tokens[1])) {
-                // TODO
+                // we need to label what is what (i.e. label will -or should- always be token 0 and opcode everything else)
+                label = tokens[0];
+                opcode = tokens[1];
+
                 log.info(format("Line %d has label '%s' and opcode '%s'.", i + 1, label, opcode));
             } else {
                 log.warning(format("Invalid syntax or unknown opcode/label at line %d: %s", (i + 1), line));
@@ -344,7 +347,9 @@ public class Translator {
             var fullClassName = INSTRUCTION_PACKAGE + opcode.substring(0, 1).toUpperCase() + opcode.substring(1) + "Instr";
 
             try {
-                // TODO
+                // above creates a string "fullClassName" but does not attach it. We must create a variable for it's use
+                var fullCName = Class.forName(fullClassName);
+
                 log.info(format("Resolved opcode '%s' to class '%s'.", opcode, fullClassName));
 
                 // Prepare operands: Resolve labels to PC index immediately
@@ -352,11 +357,17 @@ public class Translator {
                 log.info(format("Resolved operands for opcode '%s': %s", opcode, Arrays.toString(operands)));
 
                 // Get the mandatory reflection constructor signature: (String label, Object... operands)
-                // TODO
+                var mandatoryReConstructor = fullCName.getConstructor(String.class, Object.class); // followed as above
                 log.info(format("Found constructor for class '%s'.", fullClassName));
 
                 // Reflection: Instantiate the instruction dynamically
-                // TODO
+
+                // I have no idea what dynamically means apart from connect it to the interface and let it handle everything
+                // since I've already connected it. It's like connected power, I already did the outputs in advance and I'm
+                // now going to connect it to the 12 piece adapter that handles it all.
+
+                var instruction = (Instruction) mandatoryReConstructor.newInstance(label, operands);
+
                 program.add(instruction);
                 log.info(format("Instantiated instruction: %s at PC index %d", instruction.getClass().getSimpleName(), i));
 
