@@ -8,6 +8,8 @@ import java.util.Optional;
 public record JnzInstr(String label, int rCond, int targetPC) implements Instruction {
 
     // Reflection Factory Constructor: takes rCond (reg index) and targetPC (resolved index)
+
+    // takes the reg index and resolved index and adds them?? TODO: figure out what the operand is here
     public JnzInstr(String label, Object... operands) {
         this(label,
                 Translator.getRegisterIndex(operands, 0).orElse(0),

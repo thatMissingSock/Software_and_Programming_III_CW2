@@ -5,6 +5,7 @@ import com.novalang.vm.ProgramContext;
 import java.util.Optional;
 
 // 1. Sealed Interface (Design & Quality) - All instruction classes must be listed here.
+// TODO: only lets in two instructions (ADD and print), so somehow add the rest
 public sealed interface Instruction permits AddInstr, PrintInstr {
 
     /**

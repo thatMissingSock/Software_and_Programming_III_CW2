@@ -4,56 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/checkstyle/checkstyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/checkstyle/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pmd/ruleset.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/spotbugs/exclude.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/nvl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/async-example-01.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/async-example-02.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/async-example-03.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/branch_test.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/factorial-01.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/factorial-02.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/sum-call-ret.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample-files/sum.nvl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AddInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AsyncInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AwaitInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/Instruction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MulInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/PrintInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/RetInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SetInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SleepInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SubInstr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/DefaultNovaVMFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVMFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/ProgramContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/RegisterManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/novalang/vm/NovaVMIntegrationTest.java" afterDir="false" />
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Initial Commit (bar some minor comments)">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "thatMissingSock"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thatMissingSock&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/thatMissingSock/Software_and_Programming_III_CW2.git",
-    "accountId": "7508682d-0326-4545-8bab-3af9f852f0a2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/thatMissingSock/Software_and_Programming_III_CW2.git&quot;,
+    &quot;accountId&quot;: &quot;7508682d-0326-4545-8bab-3af9f852f0a2&quot;
   }
-}]]></component>
+}</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\mubar\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Users\mubar\.jdks\temurin-25.0.2" gradleVersion="9.3.1">
     <option name="jvmArguments">
       <list>
@@ -87,10 +47,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3BfATbdX6xfmIrztwa7yQS6xUOK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -102,7 +62,9 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mubar/Documents/BBK/Lessons/YEAR_3/Software and Programming III/CW2",
     "node.js.detected.package.eslint": "true",
@@ -165,11 +127,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774869760650</updated>
-      <workItem from="1774869762258" duration="2586000" />
+      <workItem from="1774869762258" duration="3728000" />
+      <workItem from="1774877072468" duration="2826000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
+      <option name="closed" value="true" />
+      <created>1774872421092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774872421092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit (bar some minor comments)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit (bar some minor comments)" />
   </component>
 </project>
