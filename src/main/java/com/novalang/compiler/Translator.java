@@ -213,19 +213,21 @@ public class Translator {
      */
     public void translate(Path path) throws IOException {
         log.info(format("Starting translation for file: %s", path));
-        // TODO
+        // we need to clear previous states before starting as per the above instruction
+        program.clear();
+        labels.clear();
 
         var lines = Files.readAllLines(path);
         log.info(format("Read %d lines from file.", lines.size()));
 
         // Pass 1: Collect Labels
         log.info("Pass 1: Collecting labels.");
-        // TODO
+        collectLabels(lines); // we try using the already existing method
         log.info(format("Collected %d labels: %s", labels.size(), labels));
 
         // Pass 2: Parse and Resolve Instructions
         log.info("Pass 2: Parsing and resolving com.novalang.instructions.");
-        // TODO
+        parseInstructions(lines); // try using the existing method
         log.info(format("Translation complete. Generated %d com.novalang.instructions.", program.size()));
     }
 

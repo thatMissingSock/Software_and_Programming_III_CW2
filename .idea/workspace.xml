@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Initial Commit (bar some minor comments)">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Added instruction classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774869760650</updated>
       <workItem from="1774869762258" duration="3728000" />
-      <workItem from="1774877072468" duration="2826000" />
+      <workItem from="1774877072468" duration="3712000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -138,7 +131,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774872421092</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reviewed TO DO LIST...TIME TO WORK">
+      <option name="closed" value="true" />
+      <created>1774880042228</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774880042228</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added instruction classes">
+      <option name="closed" value="true" />
+      <created>1774880221722</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774880221722</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +155,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit (bar some minor comments)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit (bar some minor comments)" />
+    <MESSAGE value="Reviewed TO DO LIST...TIME TO WORK" />
+    <MESSAGE value="Added instruction classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added instruction classes" />
   </component>
 </project>
