@@ -5,8 +5,11 @@ import com.novalang.vm.ProgramContext;
 import java.util.Optional;
 
 // 1. Sealed Interface (Design & Quality) - All instruction classes must be listed here.
-// TODO: only lets in two instructions (ADD and print), so somehow add the rest
-public sealed interface Instruction permits AddInstr, PrintInstr {
+
+// Done, I realised the above tells you what to do.
+public sealed interface Instruction permits AddInstr, AsyncInstr, AwaitInstr, CallInstr,
+        DivInstr, HaltInstr, JnzInstr, MovInstr, MulInstr, PrintInstr, RetInstr,
+        SetInstr, SleepInstr, SubInstr{
 
     /**
      * Executes the instruction logic on the given VM context.
