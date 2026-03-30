@@ -251,8 +251,13 @@ public class Translator {
             var firstToken = parts[0];
 
             // Check if the first token is a label (it is a label if it's NOT an opcode)
-            if (!isOpcode(firstToken)) {
-                // TODO
+            // so according to the above I need to double-check for labels and throw an error?
+            if (!isOpcode(firstToken)) { // not opcode
+                if (labels.containsValue(firstToken)) { // TODO: check if it is containsValue or containsKey
+                    throw new TranslationException("This is a label " + firstToken);
+                    // I was going to throw a new error but the IDE showed that NovaLang had a built in one?
+                    // TODO: Check if this works for it's intended purpose
+                }
                 log.info(format("Found label '%s' at PC index %d", firstToken, i));
             } else {
                 log.info(format("Token '%s' at PC %d is an opcode, not a label.", firstToken, i));
