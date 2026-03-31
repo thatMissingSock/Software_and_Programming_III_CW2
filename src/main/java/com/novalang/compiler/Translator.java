@@ -142,7 +142,7 @@ public class Translator {
      */
     public static Optional<Integer> getTargetPC(Object[] operands, int index) {
         if (!ensureOperandIsType(operands, index, Integer.class, "resolved PC index")) {
-            // TODO
+            return Optional.empty(); // based on the comments above, the integer is done below
         }
         return Optional.of((Integer) operands[index]);
     }
