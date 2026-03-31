@@ -24,7 +24,7 @@ import static java.lang.String.format;
  * Indicates errors such as syntax issues, undefined labels, duplicate labels,
  * unknown opcodes, or reflection failures during instruction instantiation.
  */
-class TranslationException extends RuntimeException {
+class  TranslationException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
     /**
@@ -325,8 +325,9 @@ public class Translator {
             var tokens = line.split("\\s+");
 
             var label = "";
-            String opcode; // TODO: I have a feeling this will do the same
-            String[] operandTokens; // TODO: this is not allowing me to run any tests and I can't make it a variable...
+            // TODO: Below is a temporary initialising, so run it after the Junit tests are up and running and then get rid of this TODO
+            String opcode = "";
+            String[] operandTokens = new String[0];
 
             // Determine structure: [label] opcode [operands...]
             if (isOpcode(tokens[0])) {

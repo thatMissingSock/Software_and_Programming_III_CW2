@@ -34,6 +34,10 @@ public class NovaVM {
      * @param initialPC    The starting program counter.
      * @param contextStack The call stack specific to this thread (main or new task stack).
      */
+
+    // NOTES FOR SELF - please disregard: as I understand it, this part is a single thread that may be called upon when
+    // undergoing instructions. This means that we need an instance or reflection of itself (I'm going to brute force and try both)
+    // and update the call stack and move to the next pc(?)
     private void executeThread(int initialPC, Stack<Integer> contextStack) {
         int pc = initialPC;
 
@@ -47,11 +51,20 @@ public class NovaVM {
             }
 
             // Create context for the instruction
-            // TODO
+            // as per instructions.vm.ProgramContext we add all the variables to be utilised and let it reference itself
+            var context = new ProgramContext(registers, pc, labels, contextStack, this);
 
             // Execute the instruction and get the next PC
+            // so this method does BOTH execution and gets the next PC in one
             Optional<Integer> nextPC = instruction.execute(context);
-            // TODO
+
+            pc = nextPC.get();
+
+            if (pc == -1) break; // impossibility
+            // additionally worth adding a catch?
+            if (nextPC.isEmpty()) {
+                throw new RuntimeException("There is no more programs found within program counter: " + pc);
+            } // N.B. I couldn't use the new translationError as it's failing because of a logical error
 
             // Task termination check: 'ret' acts as halt for async tasks
             if (contextStack != callStack && instruction instanceof RetInstr) {

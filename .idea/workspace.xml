@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Finished a TODO: collectLabels (throwing errors/TranslationExceptions(?)) &#10;DOUBLE CHECK NEW CREATED TODOs">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
     "Gradle.NovaVMIntegrationTest.executor": "Run",
     "Gradle.TranslatorTest.executor": "Run",
     "Gradle.TranslatorTest.testLabelResolution.executor": "Run",
+    "Gradle.TranslatorTest.testTranslateSimpleProgram.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -72,7 +74,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TranslatorTest.testLabelResolution">
+  <component name="RunManager" selected="Gradle.TranslatorTest">
     <configuration name="NovaVMIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -87,6 +89,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.novalang.vm.NovaVMIntegrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -121,6 +147,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TranslatorTest.testTranslateSimpleProgram" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testTranslateSimpleProgram&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,8 +178,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TranslatorTest.testLabelResolution" />
+        <item itemvalue="Gradle.TranslatorTest" />
+        <item itemvalue="Gradle.TranslatorTest.testTranslateSimpleProgram" />
         <item itemvalue="Gradle.NovaVMIntegrationTest" />
+        <item itemvalue="Gradle.TranslatorTest.testLabelResolution" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +201,8 @@
       <option name="presentableId" value="Default" />
       <updated>1774869760650</updated>
       <workItem from="1774869762258" duration="3728000" />
-      <workItem from="1774877072468" duration="7916000" />
+      <workItem from="1774877072468" duration="9069000" />
+      <workItem from="1774961475143" duration="3396000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -191,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774881591169</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;.">
+      <option name="closed" value="true" />
+      <created>1774885392580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774885392580</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +264,7 @@
     <MESSAGE value="Added instruction classes" />
     <MESSAGE value="Did three TODO's found within &quot;Translator.JAVA&quot;" />
     <MESSAGE value="Finished a TODO: collectLabels (throwing errors/TranslationExceptions(?)) &#10;DOUBLE CHECK NEW CREATED TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished a TODO: collectLabels (throwing errors/TranslationExceptions(?)) &#10;DOUBLE CHECK NEW CREATED TODOs" />
+    <MESSAGE value="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;." />
   </component>
 </project>

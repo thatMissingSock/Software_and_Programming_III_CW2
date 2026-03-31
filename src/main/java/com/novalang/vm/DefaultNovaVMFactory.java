@@ -17,6 +17,7 @@ public class DefaultNovaVMFactory implements NovaVMFactory {
     @Override
     public NovaVM create(List<Instruction> program, Map<String, Integer> labels) {
         // Delegates construction to the NovaVM's Lombok-generated constructor
-        // TODO
+        return new NovaVM(program, labels);
+        // based on vm.DefaultNovaVMFactory we only need progam and labels. We should now be able to run some compiler tests
     }
 }
