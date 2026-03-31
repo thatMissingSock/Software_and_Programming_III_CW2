@@ -251,13 +251,14 @@ public class Translator {
             var firstToken = parts[0];
 
             // Check if the first token is a label (it is a label if it's NOT an opcode)
-            // so according to the above I need to double-check for labels and throw an error?
-            if (!isOpcode(firstToken)) { // not opcode
-                if (labels.containsValue(firstToken)) { // TODO: check if it is containsValue or containsKey
+            // so according to the above I need to double-check for labels and throw an error and also store it (T1)
+            if (!isOpcode(firstToken)) {
+                if (labels.containsKey(firstToken)) { // ##### IT IS "containsKey" #####
                     throw new TranslationException("This is a label " + firstToken);
                     // I was going to throw a new error but the IDE showed that NovaLang had a built in one?
                     // TODO: Check if this works for it's intended purpose
                 }
+                labels.put(firstToken, i); // storing it
                 log.info(format("Found label '%s' at PC index %d", firstToken, i));
             } else {
                 log.info(format("Token '%s' at PC %d is an opcode, not a label.", firstToken, i));
@@ -339,6 +340,11 @@ public class Translator {
                 label = tokens[0];
                 opcode = tokens[1];
 
+                // T1 keeps failing and I think its because it attempts to read the label and then the opcode so we need
+                // to push the tokens (operandTokens) to 2 to function
+                operandTokens = Arrays.copyOfRange(tokens, 2, tokens.length);
+                // N.B I was going to just do "new" but i copied line 335 and found that it creates a new array
+
                 log.info(format("Line %d has label '%s' and opcode '%s'.", i + 1, label, opcode));
             } else {
                 log.warning(format("Invalid syntax or unknown opcode/label at line %d: %s", (i + 1), line));
@@ -358,7 +364,7 @@ public class Translator {
                 log.info(format("Resolved operands for opcode '%s': %s", opcode, Arrays.toString(operands)));
 
                 // Get the mandatory reflection constructor signature: (String label, Object... operands)
-                var mandatoryReConstructor = fullCName.getConstructor(String.class, Object.class); // followed as above
+                var mandatoryReConstructor = fullCName.getDeclaredConstructor(String.class, Object[].class); // followed as above
                 log.info(format("Found constructor for class '%s'.", fullClassName));
 
                 // Reflection: Instantiate the instruction dynamically

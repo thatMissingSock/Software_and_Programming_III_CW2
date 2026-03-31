@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;.">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,7 @@
       <updated>1774869760650</updated>
       <workItem from="1774869762258" duration="3728000" />
       <workItem from="1774877072468" duration="9069000" />
-      <workItem from="1774961475143" duration="3396000" />
+      <workItem from="1774961475143" duration="7918000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -252,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774885392580</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3.">
+      <option name="closed" value="true" />
+      <created>1774971208356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774971208356</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +272,7 @@
     <MESSAGE value="Did three TODO's found within &quot;Translator.JAVA&quot;" />
     <MESSAGE value="Finished a TODO: collectLabels (throwing errors/TranslationExceptions(?)) &#10;DOUBLE CHECK NEW CREATED TODOs" />
     <MESSAGE value="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;." />
+    <MESSAGE value="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3." />
   </component>
 </project>
