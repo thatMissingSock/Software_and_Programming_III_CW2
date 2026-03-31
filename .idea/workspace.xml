@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3.">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="HUGE PROGRESS!&#10;&#10;12 tests passed (in the TranslatorTest) out of 15 by re-coding(?) some of the TO-DOs I did earlier.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
     </list>
@@ -54,6 +54,7 @@
     "Gradle.NovaVMIntegrationTest (1).executor": "Run",
     "Gradle.NovaVMIntegrationTest.executor": "Run",
     "Gradle.TranslatorTest.executor": "Run",
+    "Gradle.TranslatorTest.testDuplicateLabels.executor": "Run",
     "Gradle.TranslatorTest.testLabelResolution.executor": "Run",
     "Gradle.TranslatorTest.testTranslateSimpleProgram.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -73,7 +74,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TranslatorTest">
+  <component name="RunManager" selected="Gradle.TranslatorTest.testDuplicateLabels">
     <configuration name="NovaVMIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -112,6 +113,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.novalang.compiler.TranslatorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TranslatorTest.testDuplicateLabels" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testDuplicateLabels&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,6 +202,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TranslatorTest.testDuplicateLabels" />
         <item itemvalue="Gradle.TranslatorTest" />
         <item itemvalue="Gradle.TranslatorTest.testTranslateSimpleProgram" />
         <item itemvalue="Gradle.NovaVMIntegrationTest" />
@@ -201,7 +227,7 @@
       <updated>1774869760650</updated>
       <workItem from="1774869762258" duration="3728000" />
       <workItem from="1774877072468" duration="9069000" />
-      <workItem from="1774961475143" duration="7918000" />
+      <workItem from="1774961475143" duration="9375000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -259,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774971208356</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HUGE PROGRESS!&#10;&#10;12 tests passed (in the TranslatorTest) out of 15 by re-coding(?) some of the TO-DOs I did earlier.">
+      <option name="closed" value="true" />
+      <created>1774975112115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774975112115</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +307,7 @@
     <MESSAGE value="Finished a TODO: collectLabels (throwing errors/TranslationExceptions(?)) &#10;DOUBLE CHECK NEW CREATED TODOs" />
     <MESSAGE value="Completed multiple TODOs within parseInstructions method but I still can't run tests due to an issue with &quot;operandTokens&quot;." />
     <MESSAGE value="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. fixed TODO in NovaVM using what's referenced in DefaultNovaVMFactory.Java as a guide allowing me to *finally* run some compiler Junit tests&#10;&#10;1.2. added an additional catch in case the pc is empty as per the README.md&#10;&#10;2. Initialised &quot;opcode&quot; and &quot;operandTokens&quot; as empty types, but it's temporary (I think I will have to change it later).&#10;&#10;3." />
+    <MESSAGE value="HUGE PROGRESS!&#10;&#10;12 tests passed (in the TranslatorTest) out of 15 by re-coding(?) some of the TO-DOs I did earlier." />
+    <option name="LAST_COMMIT_MESSAGE" value="HUGE PROGRESS!&#10;&#10;12 tests passed (in the TranslatorTest) out of 15 by re-coding(?) some of the TO-DOs I did earlier." />
   </component>
 </project>

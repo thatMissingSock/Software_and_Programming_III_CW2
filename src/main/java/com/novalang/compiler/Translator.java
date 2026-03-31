@@ -254,9 +254,7 @@ public class Translator {
             // so according to the above I need to double-check for labels and throw an error and also store it (T1)
             if (!isOpcode(firstToken)) {
                 if (labels.containsKey(firstToken)) { // ##### IT IS "containsKey" #####
-                    throw new TranslationException("This is a label " + firstToken);
-                    // I was going to throw a new error but the IDE showed that NovaLang had a built in one?
-                    // TODO: Check if this works for it's intended purpose
+                    throw new TranslationException("Duplicate label found: " + firstToken); // T4 is so specific...
                 }
                 labels.put(firstToken, i); // storing it
                 log.info(format("Found label '%s' at PC index %d", firstToken, i));
@@ -264,6 +262,7 @@ public class Translator {
                 log.info(format("Token '%s' at PC %d is an opcode, not a label.", firstToken, i));
             }
         }
+
     }
 
     /**
@@ -326,7 +325,6 @@ public class Translator {
             var tokens = line.split("\\s+");
 
             var label = "";
-            // TODO: Below is a temporary initialising, so run it after the Junit tests are up and running and then get rid of this TODO
             String opcode = "";
             String[] operandTokens = new String[0];
 
