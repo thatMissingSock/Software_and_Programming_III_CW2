@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="T9 Passed">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AwaitInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AwaitInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,31 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TranslatorTest.testLabelOnSameLineAsOpcode">
+  <component name="RunManager" selected="Gradle.NovaVMIntegrationTest">
+    <configuration name="NovaVMIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.vm.NovaVMIntegrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,30 +198,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testTranslateSimpleProgram" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testTranslateSimpleProgram&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.NovaVMIntegrationTest" />
         <item itemvalue="Gradle.TranslatorTest.testLabelOnSameLineAsOpcode" />
         <item itemvalue="Gradle.TranslatorTest" />
         <item itemvalue="Gradle.TranslatorTest.testGetTargetPC" />
         <item itemvalue="Gradle.TranslatorTest.testDuplicateLabels" />
-        <item itemvalue="Gradle.TranslatorTest.testTranslateSimpleProgram" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +231,7 @@
       <workItem from="1774869762258" duration="3728000" />
       <workItem from="1774877072468" duration="9069000" />
       <workItem from="1774961475143" duration="11758000" />
-      <workItem from="1775042105873" duration="2754000" />
+      <workItem from="1775042105873" duration="5485000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -317,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774977568669</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments">
+      <option name="closed" value="true" />
+      <created>1775045168294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1775045168294</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +338,7 @@
     <MESSAGE value="HUGE PROGRESS!&#10;&#10;12 tests passed (in the TranslatorTest) out of 15 by re-coding(?) some of the TO-DOs I did earlier." />
     <MESSAGE value="T4 passed" />
     <MESSAGE value="T9 Passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="T9 Passed" />
+    <MESSAGE value="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments" />
   </component>
 </project>

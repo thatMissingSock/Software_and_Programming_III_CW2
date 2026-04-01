@@ -78,7 +78,8 @@ public class NovaVM {
      */
     public void run() {
         log.info("VM starting execution on main thread...");
-        //TODO
+
+        executeThread(0, callStack); // should start at 0 since it's main
 
         // Clean up resources
         executor.shutdownNow();
@@ -91,13 +92,19 @@ public class NovaVM {
      *
      * @param startPC The program counter where the task should start.
      */
+
+    // as I understand it, it uses 'startPC' to query the pc where it should start a asynchronious thread and start to
+    // execute. So my code attempts to create a new stack (LIFO) and then puts it in 'asyncTsks'
     public void startAsyncTask(int startPC) {
         // Concurrency: Use Virtual Threads (Required)
         Future<?> future = executor.submit(() -> {
             // New stack for the async task
-            // TODO
+            Stack<Integer> async = new Stack<>();
+            executeThread(startPC, async);
+
         });
-        // TODO
+
+        asyncTasks.add(future); // tags it so we can log how many concurrent tasks are in the VM via the hash-set
 
         log.info("VM started async task at PC " + startPC + ". Total running tasks: " + asyncTasks.size());
     }
