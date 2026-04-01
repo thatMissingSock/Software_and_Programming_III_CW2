@@ -275,6 +275,7 @@ public class Translator {
         return resolveOpcodeClass(token).isPresent();
     }
 
+    // below has no T O D Os but I think it's the issue for 'T12'
     /**
      * Attempts to resolve a token to an Instruction class using reflection.
      * Converts the token to a class name by capitalizing the first letter and appending "Instr".
@@ -283,12 +284,20 @@ public class Translator {
      * @param token the opcode token to resolve
      * @return Optional containing the resolved Class, or empty if not found or token is null/empty
      */
+
+    // the README says words are used as tokens to each instruction which it is doing?
     private Optional<Class<?>> resolveOpcodeClass(String token) {
+        token = token.toUpperCase();
         if (token == null || token.isEmpty()) {
             log.info("Token is null or empty, not an opcode.");
             return Optional.empty();
         }
-        var className = token.substring(0, 1).toUpperCase() + token.substring(1) + "Instr";
+//        var className = token.substring(0, 1).toUpperCase() + token.substring(1) + "Instr";
+//        IO.println(className);
+        // its upper-casing all of it (Sub == SUB instead of SubInstr)
+
+        var className = token.substring(0, 1).toUpperCase() + token.substring(1).toLowerCase() + "Instr";
+        IO.println(token);
         log.info(format("Token %s trying to resolve %s", token, className));
         try {
             var clazz = Class.forName(INSTRUCTION_PACKAGE + className);
@@ -317,7 +326,7 @@ public class Translator {
             var line = lines.get(i).trim();
             log.info(format("Parsing line %d: '%s'", i + 1, line));
             if (line.isEmpty() || line.startsWith(";") || line.startsWith("#")) {
-                program.add(null); // it adds a null? TODO: double check if this is how the PC works in this project
+                program.add(null);
                 log.info(format("Added null for empty or comment line at PC %d.", i));
                 continue;
             }

@@ -5,7 +5,6 @@ import com.novalang.compiler.Translator;
 
 import java.util.Optional;
 
-// TODO: this is an await instruction but it only takes in the label with no destination instruction, double check that it does not need the destination also
 public record AwaitInstr(String label) implements Instruction {
 
     // Reflection Factory Constructor

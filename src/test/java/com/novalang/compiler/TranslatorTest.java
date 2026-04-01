@@ -277,6 +277,8 @@ public class TranslatorTest {
         assertInstanceOf(AddInstr.class, program.get(2));
     }
 
+
+    // I CAN'T FIGURE THIS OUT.
     @Test
     @DisplayName("T12: Should handle label on same line as opcode")
     void testLabelOnSameLineAsOpcode() throws Exception {
