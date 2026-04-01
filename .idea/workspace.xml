@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/vm/NovaVM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/novalang/vm/NovaVMIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novalang/vm/NovaVMIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +52,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.CW2 [:com.novalang.App.main()].executor": "Run",
     "Gradle.NovaVMIntegrationTest (1).executor": "Run",
     "Gradle.NovaVMIntegrationTest.executor": "Run",
+    "Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency.executor": "Run",
+    "Gradle.NovaVMIntegrationTest.testCallAndReturn.executor": "Run",
+    "Gradle.NovaVMIntegrationTest.testSum1To10.executor": "Run",
     "Gradle.TranslatorTest (1).executor": "Run",
     "Gradle.TranslatorTest.executor": "Run",
     "Gradle.TranslatorTest.testDuplicateLabels.executor": "Run",
@@ -77,7 +82,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.NovaVMIntegrationTest">
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NovaVMIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -102,7 +120,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NovaVMIntegrationTest.testAsyncAwaitConcurrency" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -115,7 +133,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest&quot;" />
+            <option value="&quot;com.novalang.vm.NovaVMIntegrationTest.testAsyncAwaitConcurrency&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -126,7 +144,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testDuplicateLabels" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NovaVMIntegrationTest.testCallAndReturn" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -139,7 +157,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testDuplicateLabels&quot;" />
+            <option value="&quot;com.novalang.vm.NovaVMIntegrationTest.testCallAndReturn&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,7 +168,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testGetTargetPC" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NovaVMIntegrationTest.testSum1To10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,31 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testGetTargetPC&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TranslatorTest.testLabelOnSameLineAsOpcode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testLabelOnSameLineAsOpcode&quot;" />
+            <option value="&quot;com.novalang.vm.NovaVMIntegrationTest.testSum1To10&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency" />
+        <item itemvalue="Gradle.NovaVMIntegrationTest.testCallAndReturn" />
+        <item itemvalue="Gradle.NovaVMIntegrationTest.testSum1To10" />
         <item itemvalue="Gradle.NovaVMIntegrationTest" />
-        <item itemvalue="Gradle.TranslatorTest.testLabelOnSameLineAsOpcode" />
-        <item itemvalue="Gradle.TranslatorTest" />
-        <item itemvalue="Gradle.TranslatorTest.testGetTargetPC" />
-        <item itemvalue="Gradle.TranslatorTest.testDuplicateLabels" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +225,7 @@
       <workItem from="1774869762258" duration="3728000" />
       <workItem from="1774877072468" duration="9069000" />
       <workItem from="1774961475143" duration="11758000" />
-      <workItem from="1775042105873" duration="5485000" />
+      <workItem from="1775042105873" duration="7402000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -321,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775045168294</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think).">
+      <option name="closed" value="true" />
+      <created>1775048493773</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1775048493773</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +341,7 @@
     <MESSAGE value="T4 passed" />
     <MESSAGE value="T9 Passed" />
     <MESSAGE value="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments" />
+    <MESSAGE value="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think)." />
   </component>
 </project>

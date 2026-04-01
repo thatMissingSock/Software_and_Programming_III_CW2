@@ -31,28 +31,31 @@ public class App {
             System.exit(1);
         }
 
-        // --- Dependency Injection / Wiring Phase ---
-        Translator translator = null; // TODO
-        NovaVMFactory vmFactory = null; // TODO
 
+        // --- Dependency Injection / Wiring Phase ---
+        Translator translator = new Translator();
+        NovaVMFactory vmFactory = new DefaultNovaVMFactory();
+        // the above just needed to be connected to the right locations
 
         try {
             // Check filename is valid
             try {
-                Path f = validate(args[0]);
+                Path f = validate(args[0]); // it starts a path that needs to undergo validation steps
 
+                // nanoTime == REALLY precise time keeping method
                 // 1. Translation: Load and parse the source file
                 System.out.printf("Translating source file: %s\n", args[0]);
                 long translationStart = System.nanoTime();
-                // TODO — translate the file
+                translator.translate(f);
                 long translationEnd = System.nanoTime();
 
                 // 2. Data Retrieval
-                List<Instruction> program = null; // TODO
-                Map<String, Integer> labels = null; // TODO
+                // retrieves the results after translation
+                List<Instruction> program = translator.program();
+                Map<String, Integer> labels = translator.labels();
 
                 // 3. VM Creation using Factory (DI)
-                NovaVM vm = null; // TODO
+                NovaVM vm = vmFactory.create(program, labels);
 
                 // 4. Run
                 System.out.println("\n--- Program Execution ---");
