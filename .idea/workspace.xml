@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think).">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/novalang/vm/NovaVMIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novalang/vm/NovaVMIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO_LIST.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build CW2.executor": "Run",
     "Gradle.CW2 [:com.novalang.App.main()].executor": "Run",
     "Gradle.NovaVMIntegrationTest (1).executor": "Run",
     "Gradle.NovaVMIntegrationTest.executor": "Run",
@@ -65,6 +66,7 @@
     "Gradle.TranslatorTest.testLabelOnSameLineAsOpcode.executor": "Run",
     "Gradle.TranslatorTest.testLabelResolution.executor": "Run",
     "Gradle.TranslatorTest.testTranslateSimpleProgram.executor": "Run",
+    "JUnit.testJunit.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -78,11 +80,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.testJunit">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
       <module name="CW2.main" />
@@ -192,11 +194,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="testJunit" type="JUnit" factoryName="JUnit">
+      <module name="CW2.test" />
+      <option name="PACKAGE_NAME" value="com.novalang.compiler" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/novalang" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Gradle.NovaVMIntegrationTest" />
+      <item itemvalue="Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency" />
+      <item itemvalue="Gradle.NovaVMIntegrationTest.testCallAndReturn" />
+      <item itemvalue="Gradle.NovaVMIntegrationTest.testSum1To10" />
+      <item itemvalue="JUnit.testJunit" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency" />
@@ -225,7 +246,7 @@
       <workItem from="1774869762258" duration="3728000" />
       <workItem from="1774877072468" duration="9069000" />
       <workItem from="1774961475143" duration="11758000" />
-      <workItem from="1775042105873" duration="7402000" />
+      <workItem from="1775042105873" duration="11580000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -323,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775048493773</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail">
+      <option name="closed" value="true" />
+      <created>1775050585417</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1775050585417</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +371,7 @@
     <MESSAGE value="T9 Passed" />
     <MESSAGE value="1. Removed a lot of TODOs from instructions as I understand how they work properly.&#10;&#10;2. Fixed 'isOpcode' so it properly lowercases and uppercases the correct characters.&#10;&#10;3. I couldn't figure out how to complete T12 in TranslatorTest.java so I added comments" />
     <MESSAGE value="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think)." />
+    <MESSAGE value="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail" />
   </component>
 </project>

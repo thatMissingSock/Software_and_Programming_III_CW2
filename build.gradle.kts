@@ -2,6 +2,7 @@
 
 plugins {
     java
+    // JaCoCo auto-installs on intelliJ...the effort wasted
     jacoco // Required for code coverage report
     application // For easy running via 'gradle run'
     pmd
