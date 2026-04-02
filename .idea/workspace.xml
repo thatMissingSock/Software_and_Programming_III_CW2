@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="JaCoCo Initialised! (much time wasted chasing my own tail due to IntelliJ IDE)">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="New tests made for MullInstr to satisfy JaCoCO (4 tests)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +19,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,17 +73,19 @@
     "Gradle.NovaVMIntegrationTest.testCallAndReturn.executor": "Run",
     "Gradle.NovaVMIntegrationTest.testSum1To10.executor": "Run",
     "Gradle.TranslatorTest (1).executor": "Run",
-    "Gradle.TranslatorTest.executor": "Run",
+    "Gradle.TranslatorTest.executor": "Coverage",
+    "Gradle.TranslatorTest.movingEmptyRegister.executor": "Run",
     "Gradle.TranslatorTest.testDuplicateLabels.executor": "Run",
     "Gradle.TranslatorTest.testGetTargetPC.executor": "Run",
     "Gradle.TranslatorTest.testLabelOnSameLineAsOpcode.executor": "Run",
     "Gradle.TranslatorTest.testLabelResolution.executor": "Run",
+    "Gradle.TranslatorTest.testMovingInvalidRegister.executor": "Run",
     "Gradle.TranslatorTest.testMulBasic.executor": "Run",
     "Gradle.TranslatorTest.testMulInvalidRegister.executor": "Run",
     "Gradle.TranslatorTest.testMulMultipleInstructions.executor": "Run",
     "Gradle.TranslatorTest.testMulWrongOperandCount.executor": "Run",
     "Gradle.TranslatorTest.testTranslateSimpleProgram.executor": "Run",
-    "JUnit.masterJunit.executor": "Run",
+    "JUnit.masterJunit.executor": "Coverage",
     "JUnit.testJunit.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -90,7 +104,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.masterJunit">
+  <component name="RunManager" selected="Gradle.TranslatorTest.movingEmptyRegister">
     <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -115,6 +129,54 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TranslatorTest.movingEmptyRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.movingEmptyRegister&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TranslatorTest.testMovingInvalidRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testMovingInvalidRegister&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TranslatorTest.testMulBasic" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,54 +191,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.novalang.compiler.TranslatorTest.testMulBasic&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TranslatorTest.testMulInvalidRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testMulInvalidRegister&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TranslatorTest.testMulMultipleInstructions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testMulMultipleInstructions&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -239,9 +253,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.TranslatorTest.movingEmptyRegister" />
+      <item itemvalue="Gradle.TranslatorTest.testMovingInvalidRegister" />
       <item itemvalue="Gradle.TranslatorTest.testMulBasic" />
-      <item itemvalue="Gradle.TranslatorTest.testMulInvalidRegister" />
-      <item itemvalue="Gradle.TranslatorTest.testMulMultipleInstructions" />
       <item itemvalue="Gradle.TranslatorTest.testMulWrongOperandCount" />
       <item itemvalue="Gradle.TranslatorTest" />
       <item itemvalue="JUnit.testJunit" />
@@ -249,11 +263,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TranslatorTest.movingEmptyRegister" />
+        <item itemvalue="Gradle.TranslatorTest.testMovingInvalidRegister" />
         <item itemvalue="Gradle.TranslatorTest" />
         <item itemvalue="Gradle.TranslatorTest.testMulBasic" />
         <item itemvalue="Gradle.TranslatorTest.testMulWrongOperandCount" />
-        <item itemvalue="Gradle.TranslatorTest.testMulInvalidRegister" />
-        <item itemvalue="Gradle.TranslatorTest.testMulMultipleInstructions" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +291,7 @@
       <workItem from="1774961475143" duration="11758000" />
       <workItem from="1775042105873" duration="12566000" />
       <workItem from="1775056284820" duration="2712000" />
-      <workItem from="1775118808615" duration="2903000" />
+      <workItem from="1775118808615" duration="10444000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -391,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775055319875</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="New tests made for MullInstr to satisfy JaCoCO (4 tests)">
+      <option name="closed" value="true" />
+      <created>1775122040578</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1775122040578</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +434,8 @@
     <MESSAGE value="Fixed the TODOs in the NovaVM.java, yet to be tested via its accompanying tests as I need to fix the TODOs in App (I think)." />
     <MESSAGE value="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail" />
     <MESSAGE value="JaCoCo Initialised! (much time wasted chasing my own tail due to IntelliJ IDE)" />
-    <option name="LAST_COMMIT_MESSAGE" value="JaCoCo Initialised! (much time wasted chasing my own tail due to IntelliJ IDE)" />
+    <MESSAGE value="New tests made for MullInstr to satisfy JaCoCO (4 tests)" />
+    <option name="LAST_COMMIT_MESSAGE" value="New tests made for MullInstr to satisfy JaCoCO (4 tests)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CW2$masterJunit.ic" NAME="masterJunit Coverage Results" MODIFIED="1775121972628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

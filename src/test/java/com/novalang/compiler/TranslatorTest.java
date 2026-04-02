@@ -426,4 +426,50 @@ public class TranslatorTest {
         assertInstanceOf(MulInstr.class, translator.program().get(1));
         IO.println(translator.program().get(1));
     }
+
+    // New tests to test for 'MovInstr'
+
+    // The first test is to test for wrong registers
+    @Test
+    @DisplayName("T20: Should correctly throw exception for the moving of invalid register")
+    void testMovingInvalidRegister() throws Exception {
+        String tmpFile = """
+            set r4 20
+            mov r4 r32
+            halt
+            """;
+        Path tempFile = writeTempFile(tmpFile);
+
+        assertThrows(TranslationException.class, () -> translator.translate(tempFile));
+    }
+
+//    // Second test to test for too little inputs (moving empty registers)
+//    @Test
+//    @DisplayName("T21: Throw exceptions when trying to move empty registers")
+//    void movingEmptyRegister() throws  Exception {
+//        String tmpFile = """
+//                mov r1 r5
+//                halt
+//                """;
+//        Path tempFile = writeTempFile(tmpFile);
+//
+//
+//
+//    }
+
+    @Test
+    @DisplayName("T21: Should correctly parse mov instruction with unset registers")
+    void movingEmptyRegister() throws Exception {
+        String tmpFile = """
+            mov r1 r5
+            halt
+            """;
+        Path tempFile = writeTempFile(tmpFile);
+        translator.translate(tempFile);
+
+        assertInstanceOf(MovInstr.class, translator.program().get(0));
+        MovInstr mov = (MovInstr) translator.program().get(0);
+        assertEquals(1, mov.rDest(), "rDest should be r1");
+        assertEquals(5, mov.rSrc(), "rSrc should be r5");
+    }
 }

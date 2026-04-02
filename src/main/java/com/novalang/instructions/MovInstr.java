@@ -5,7 +5,8 @@ import com.novalang.compiler.Translator;
 
 import java.util.Optional;
 
-// DNC - 30-03-26
+// after testing, this is more akin to copying than actually moving registers (much like actual storage). It'll move it
+// from one register to another and the other storage will remain the same value untill it gets rewritten
 public record MovInstr(String label, int rDest, int rSrc) implements Instruction {
 
     // Reflection Factory Constructor

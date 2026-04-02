@@ -297,7 +297,7 @@ public class Translator {
         // its upper-casing all of it (Sub == SUB instead of SubInstr)
 
         var className = token.substring(0, 1).toUpperCase() + token.substring(1).toLowerCase() + "Instr";
-        IO.println(token);
+//        IO.println(token);
         log.info(format("Token %s trying to resolve %s", token, className));
         try {
             var clazz = Class.forName(INSTRUCTION_PACKAGE + className);
@@ -375,10 +375,6 @@ public class Translator {
                 log.info(format("Found constructor for class '%s'.", fullClassName));
 
                 // Reflection: Instantiate the instruction dynamically
-
-                // I have no idea what dynamically means apart from connect it to the interface and let it handle everything
-                // since I've already connected it. It's like connected power, I already did the outputs in advance and I'm
-                // now going to connect it to the 12 piece adapter that handles it all.
 
                 var instruction = (Instruction) mandatoryReConstructor.newInstance(label, operands);
 
