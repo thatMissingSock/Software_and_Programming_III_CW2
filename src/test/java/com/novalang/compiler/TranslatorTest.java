@@ -360,4 +360,70 @@ public class TranslatorTest {
         assertFalse(translator.labels().containsKey("LABEL1"));
         assertEquals(2, translator.program().size());
     }
+
+    // New tests created by me!
+
+
+    // first test to test 'MullInstr', simple multiplication
+    @Test
+    @DisplayName("T16: Should correctly multiply two registers")
+    void testMulBasic() throws Exception {
+        String tmpSource = """
+                set r1 3
+                set r2 4
+                mul r0 r1 r2
+                halt
+                """;
+        Path tempFile = writeTempFile(tmpSource);
+        translator.translate(tempFile);
+
+        // check reflection correctly worked
+        assertInstanceOf(MulInstr.class, translator.program().get(2));
+
+        // check operands were correctly multiplied and in the right location (parsed)
+        MulInstr mul = (MulInstr) translator.program().get(2);
+        assertEquals(0, mul.rDest(), "rDest should be r0");
+        assertEquals(1, mul.rSrc1(), "rSrc1 should be r1");
+        assertEquals(2, mul.rSrc2(), "rSrc2 should be r2");
+        IO.println(translator.program().get(2));
+    }
+
+    // Second test checks to check for correct no. of inputs and throws errors if not
+    @Test
+    @DisplayName("T17: Should throw exception for wrong operand count")
+    void testMulWrongOperandCount() throws Exception {
+        String tmpFile = "mul r0 r1";
+        Path tempFile = writeTempFile(tmpFile);
+
+        assertThrows(TranslationException.class, () -> translator.translate(tempFile));
+    }
+
+
+    // EDGE CASE: tests for if an input is an invalid register
+    @Test
+    @DisplayName("T18: Should throw exception for invalid register")
+    void testMulInvalidRegister() throws Exception {
+        String tmpFile = "mul r0 r1 r32";
+        Path tempFile = writeTempFile(tmpFile);
+
+        assertThrows(TranslationException.class, () -> translator.translate(tempFile));
+    }
+
+    // Should correctly handle multiple mul-instructions (until halt)
+    @Test
+    @DisplayName("T19: Should correctly parse multiple mul instructions")
+    void testMulMultipleInstructions() throws Exception { // I DIDN'T EXPECT IT TO WORK!
+        String tmpFile = """
+                mul r0 r1 r2
+                mul r3 r4 r5
+                halt
+                """;
+        Path tempFile = writeTempFile(tmpFile);
+        translator.translate(tempFile);
+
+        assertEquals(3, translator.program().size());
+        assertInstanceOf(MulInstr.class, translator.program().get(0));
+        assertInstanceOf(MulInstr.class, translator.program().get(1));
+        IO.println(translator.program().get(1));
+    }
 }
