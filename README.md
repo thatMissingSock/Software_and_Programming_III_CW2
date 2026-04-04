@@ -96,4 +96,36 @@ You are provided with the majority of the code, and you must add to this codebas
 + −10 if tests do not run correctly.
 + −5 if poor documentation.#   S o f t w a r e _ a n d _ P r o g r a m m i n g _ I I I _ C W 2 
  
- 
+## Core components to achieve Learning Objectives
+1. The Core VM with 32 registers with the additionally features of:
+   + integers defaulting to 0
+   + labels being utilised
+   + a program counter (pc) being used
+   + a callStack being utilised (for call/ret)
+   + asyncTask management
+2. The instruction model is sealed + *every* opocde has a record
+3. The translator includes and utilises the following:
+   + parses lines whilst validates operands (except two labels on the same line TBC 04-04-26)
+   + using reflection and a naming convention to instantiate an instruction classes
+     + this just means that ADD == addInstr etc
+   + this software *does* include mandatory constructor signatures, dependent on the opcode
+   + this software does inject dependencies via the DI interface
+4. The execution always uses:
+   + fetch-decode-execute loops (or fails)
+   + utilises virtual threads for async
+   + has safe halts (doesn't crash anymore)
+5. This program does tell you exactly what is wrong with a sentence (e.g. unknown opcode)
+6. This program does the following:
+   + has enough Junit tests to satisfy the JaCoCo tests (79%)
+   + the integration tests with the given NVL programs utilising the 'java.com.novaLang.App' file all work with the intended outputs coming out
+7. The tests is utilising the following:
+   + Gradle: 9.3.1
+   + Java: 25.0.2
+   + JaCoCo (plugin)
+   + SpotBugs (plugin has been intsalled (via the intelliJ market-place and was utilised during the building of this CW))
+   + CheckStyle (plug has been installed (via the intelliJ market-place and was utilised at the end of the project ('sun checks')))
+   + PMD (####################################)
+   + Spotless (####################################)
+
+N.B. There will also be a .zip file with the same files and a file connecting you to my 'personal' but public repository
+allowing you (the examiner) to see all my push/commit. 

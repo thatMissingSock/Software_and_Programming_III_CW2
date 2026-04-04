@@ -258,6 +258,13 @@ public class Translator {
                 }
                 labels.put(firstToken, i); // storing it
                 log.info(format("Found label '%s' at PC index %d", firstToken, i));
+            } else if (parts.length > 2 && isOpcode(parts[1])) { // *should* check the second token using 'isOpcode'
+                if (labels.containsKey(firstToken)) {
+                    throw new TranslationException("Duplicate label found:" + firstToken);
+                }
+                labels.put(firstToken, i);
+                log.info(format("Found label '%s' (opcode name used as label) at PC index %d", firstToken, i));
+
             } else {
                 log.info(format("Token '%s' at PC %d is an opcode, not a label.", firstToken, i));
             }
@@ -338,7 +345,7 @@ public class Translator {
             String[] operandTokens = new String[0];
 
             // Determine structure: [label] opcode [operands...]
-            if (isOpcode(tokens[0])) {
+            if (isOpcode(tokens[0]) && !(tokens.length > 2 && isOpcode(tokens[1]))) { // CHANGED DOUBLE-CHECK
                 opcode = tokens[0];
                 operandTokens = Arrays.copyOfRange(tokens, 1, tokens.length);
                 log.info(format("Line %d starts with opcode '%s'.", i + 1, opcode));

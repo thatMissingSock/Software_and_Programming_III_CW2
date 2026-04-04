@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="New tests made for MullInstr to satisfy JaCoCO (4 tests)">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/novalang/compiler/TranslatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,32 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CW2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CW2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CW2" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CW2" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -53,6 +77,12 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/temurin-25.0.2/lib/src.zip!/java.base/java/lang/NoClassDefFoundError.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JavaCoverageOptionsProvider">
+    <option name="myTestModulesCoverage" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -62,49 +92,202 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build CW2.executor": "Run",
-    "Gradle.CW2 [:com.novalang.App.main()].executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.NovaVMIntegrationTest (1).executor": "Run",
-    "Gradle.NovaVMIntegrationTest.executor": "Run",
-    "Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency.executor": "Run",
-    "Gradle.NovaVMIntegrationTest.testCallAndReturn.executor": "Run",
-    "Gradle.NovaVMIntegrationTest.testSum1To10.executor": "Run",
-    "Gradle.TranslatorTest (1).executor": "Run",
-    "Gradle.TranslatorTest.executor": "Coverage",
-    "Gradle.TranslatorTest.movingEmptyRegister.executor": "Run",
-    "Gradle.TranslatorTest.testDuplicateLabels.executor": "Run",
-    "Gradle.TranslatorTest.testGetTargetPC.executor": "Run",
-    "Gradle.TranslatorTest.testLabelOnSameLineAsOpcode.executor": "Run",
-    "Gradle.TranslatorTest.testLabelResolution.executor": "Run",
-    "Gradle.TranslatorTest.testMovingInvalidRegister.executor": "Run",
-    "Gradle.TranslatorTest.testMulBasic.executor": "Run",
-    "Gradle.TranslatorTest.testMulInvalidRegister.executor": "Run",
-    "Gradle.TranslatorTest.testMulMultipleInstructions.executor": "Run",
-    "Gradle.TranslatorTest.testMulWrongOperandCount.executor": "Run",
-    "Gradle.TranslatorTest.testTranslateSimpleProgram.executor": "Run",
-    "JUnit.masterJunit.executor": "Coverage",
-    "JUnit.testJunit.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mubar/Documents/BBK/Lessons/YEAR_3/Software and Programming III/CW2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.Build CW2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CW2 [:com.novalang.App.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NovaVMIntegrationTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NovaVMIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NovaVMIntegrationTest.testAsyncAwaitConcurrency.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NovaVMIntegrationTest.testCallAndReturn.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NovaVMIntegrationTest.testSum1To10.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.movingEmptyRegister.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testDuplicateLabels.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testGetTargetPC.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testLabelOnSameLineAsOpcode.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testLabelResolution.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testMovingInvalidRegister.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testMulBasic.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testMulInvalidRegister.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testMulMultipleInstructions.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testMulWrongOperandCount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testTranslateSimpleProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TranslatorTest.testUnknownOpcode.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.masterTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.masterJunit.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.testJunit.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mubar/Documents/BBK/Lessons/YEAR_3/Software and Programming III/CW2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.TranslatorTest.movingEmptyRegister">
+}</component>
+  <component name="RunManager" selected="Gradle.masterTests">
+    <configuration name="async-example-01.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="async-example-01.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="async-example-02.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="async-example-02.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="async-example-03.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="async-example-03.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boilerPlate (1)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="factorial-01.nvl, su.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boilerPlate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="factorial-01.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="factorial-01.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="factorial-01.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="factorial-02.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="factorial-02.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sum-call-ret.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="sum-call-ret.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sum.nvl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.novalang.App" />
+      <module name="CW2.main" />
+      <option name="PROGRAM_PARAMETERS" value="sum.nvl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.novalang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NovaVMIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.novalang.vm.NovaVMIntegrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TranslatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,7 +312,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.movingEmptyRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest.testLabelOnSameLineAsOpcode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +325,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.movingEmptyRegister&quot;" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testLabelOnSameLineAsOpcode&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +336,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testMovingInvalidRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest.testLabelResolution" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +349,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testMovingInvalidRegister&quot;" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testLabelResolution&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,7 +360,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testMulBasic" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TranslatorTest.testUnknownOpcode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +373,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testMulBasic&quot;" />
+            <option value="&quot;com.novalang.compiler.TranslatorTest.testUnknownOpcode&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,7 +384,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorTest.testMulWrongOperandCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="masterTests" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -212,17 +395,15 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.novalang.compiler.TranslatorTest.testMulWrongOperandCount&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="masterJunit" type="JUnit" factoryName="JUnit">
@@ -253,21 +434,31 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.TranslatorTest.movingEmptyRegister" />
-      <item itemvalue="Gradle.TranslatorTest.testMovingInvalidRegister" />
-      <item itemvalue="Gradle.TranslatorTest.testMulBasic" />
-      <item itemvalue="Gradle.TranslatorTest.testMulWrongOperandCount" />
+      <item itemvalue="Application.boilerPlate" />
+      <item itemvalue="Application.boilerPlate (1)" />
+      <item itemvalue="Application.async-example-03.nvl" />
+      <item itemvalue="Application.async-example-02.nvl" />
+      <item itemvalue="Application.async-example-01.nvl" />
+      <item itemvalue="Application.sum-call-ret.nvl" />
+      <item itemvalue="Application.factorial-02.nvl" />
+      <item itemvalue="Application.sum.nvl" />
+      <item itemvalue="Application.factorial-01.nvl" />
+      <item itemvalue="Gradle.masterTests" />
+      <item itemvalue="Gradle.TranslatorTest.testLabelOnSameLineAsOpcode" />
+      <item itemvalue="Gradle.TranslatorTest.testLabelResolution" />
+      <item itemvalue="Gradle.TranslatorTest.testUnknownOpcode" />
       <item itemvalue="Gradle.TranslatorTest" />
+      <item itemvalue="Gradle.NovaVMIntegrationTest" />
       <item itemvalue="JUnit.testJunit" />
       <item itemvalue="JUnit.masterJunit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TranslatorTest.movingEmptyRegister" />
-        <item itemvalue="Gradle.TranslatorTest.testMovingInvalidRegister" />
+        <item itemvalue="Gradle.NovaVMIntegrationTest" />
+        <item itemvalue="Gradle.TranslatorTest.testLabelOnSameLineAsOpcode" />
         <item itemvalue="Gradle.TranslatorTest" />
-        <item itemvalue="Gradle.TranslatorTest.testMulBasic" />
-        <item itemvalue="Gradle.TranslatorTest.testMulWrongOperandCount" />
+        <item itemvalue="Gradle.TranslatorTest.testUnknownOpcode" />
+        <item itemvalue="Gradle.TranslatorTest.testLabelResolution" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +482,13 @@
       <workItem from="1774961475143" duration="11758000" />
       <workItem from="1775042105873" duration="12566000" />
       <workItem from="1775056284820" duration="2712000" />
-      <workItem from="1775118808615" duration="10444000" />
+      <workItem from="1775118808615" duration="10491000" />
+      <workItem from="1775227101753" duration="6693000" />
+      <workItem from="1775306823995" duration="245000" />
+      <workItem from="1775307195451" duration="546000" />
+      <workItem from="1775308819457" duration="5634000" />
+      <workItem from="1775329142077" duration="3255000" />
+      <workItem from="1775332468424" duration="428000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -413,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775122040578</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly">
+      <option name="closed" value="true" />
+      <created>1775133549218</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1775133549218</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,11 +640,16 @@
     <MESSAGE value="1. I did the main rewiwirng in App for Translator and NovaVMFactory, ensuring there is no hard-coding (as I understand, if you change these values everything changes).&#10;&#10;2. I fixed the TODOs for data retrieval&#10;&#10;3. I fixed the TODO for NovaVM &#10;&#10;4. I altered the Junit tests (slightly) by allowing them to unwrap again as they had the same value but were coming up as a fail" />
     <MESSAGE value="JaCoCo Initialised! (much time wasted chasing my own tail due to IntelliJ IDE)" />
     <MESSAGE value="New tests made for MullInstr to satisfy JaCoCO (4 tests)" />
-    <option name="LAST_COMMIT_MESSAGE" value="New tests made for MullInstr to satisfy JaCoCO (4 tests)" />
+    <MESSAGE value="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CW2$masterJunit.ic" NAME="masterJunit Coverage Results" MODIFIED="1775121972628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CW2$masterJunit.ic" NAME="masterJunit Coverage Results" MODIFIED="1775309455117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/CW2$TranslatorTest.ic" NAME="TranslatorTest Coverage Results" MODIFIED="1775121909651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CW2$masterJunit.exec" NAME="masterJunit Coverage Results" MODIFIED="1775309366946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CW2$App.ic" NAME="App Coverage Results" MODIFIED="1775233287426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.novalang.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/CW2$TranslatorTest_testMulBasic.ic" NAME="TranslatorTest.testMulBasic Coverage Results" MODIFIED="1775121652091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
