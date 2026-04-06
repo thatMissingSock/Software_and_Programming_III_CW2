@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record MulInstr(String label, int rDest, int rSrc1, int rSrc2) implements Instruction {
+    /**
+     * Instruction that multiplies two registers (rSrc1 & rSrc2) and stores the result in a destination register (rDest)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rDest, rSrc1, rSrc2 as register indices
+     */
 
     // Reflection Factory Constructor
     public MulInstr(String label, Object... operands) {

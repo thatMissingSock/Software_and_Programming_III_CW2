@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record PrintInstr(String label, int rSrc) implements Instruction {
+    /**
+     * Instruction that prints the value of the register (rSrc)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rSrc as an index
+     */
 
     // Reflection Factory Constructor
     public PrintInstr(String label, Object... operands) {

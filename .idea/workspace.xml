@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly">
+    <list default="true" id="954a4066-a759-4405-a3c3-ac3c99170afb" name="Changes" comment="1. README.md has been adjusted to highlight was has been done&#10;&#10;2. JaCoCo coverage reports have been included (79%) &#10;&#10;3. ALL tests (including T12!!!) are functional&#10;&#10;3.1. Translator.java had to be changed in order for T12 to function">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/CW2.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/compiler/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AddInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AddInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AsyncInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AsyncInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AwaitInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/AwaitInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/CallInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/DivInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/HaltInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/JnzInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MovInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MulInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/MulInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/PrintInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/PrintInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/RetInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/RetInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SetInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SetInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SleepInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SleepInstr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SubInstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novalang/instructions/SubInstr.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +139,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -488,7 +504,8 @@
       <workItem from="1775307195451" duration="546000" />
       <workItem from="1775308819457" duration="5634000" />
       <workItem from="1775329142077" duration="3255000" />
-      <workItem from="1775332468424" duration="428000" />
+      <workItem from="1775332468424" duration="673000" />
+      <workItem from="1775486615233" duration="2834000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit (bar some minor comments)">
       <option name="closed" value="true" />
@@ -618,7 +635,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775133549218</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="1. README.md has been adjusted to highlight was has been done&#10;&#10;2. JaCoCo coverage reports have been included (79%) &#10;&#10;3. ALL tests (including T12!!!) are functional&#10;&#10;3.1. Translator.java had to be changed in order for T12 to function">
+      <option name="closed" value="true" />
+      <created>1775333039404</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1775333039404</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +666,8 @@
     <MESSAGE value="JaCoCo Initialised! (much time wasted chasing my own tail due to IntelliJ IDE)" />
     <MESSAGE value="New tests made for MullInstr to satisfy JaCoCO (4 tests)" />
     <MESSAGE value="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some tests for 'MovInstr' but I want to add more to satisfy JaCoCo properly" />
+    <MESSAGE value="1. README.md has been adjusted to highlight was has been done&#10;&#10;2. JaCoCo coverage reports have been included (79%) &#10;&#10;3. ALL tests (including T12!!!) are functional&#10;&#10;3.1. Translator.java had to be changed in order for T12 to function" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. README.md has been adjusted to highlight was has been done&#10;&#10;2. JaCoCo coverage reports have been included (79%) &#10;&#10;3. ALL tests (including T12!!!) are functional&#10;&#10;3.1. Translator.java had to be changed in order for T12 to function" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CW2$masterJunit.ic" NAME="masterJunit Coverage Results" MODIFIED="1775309455117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

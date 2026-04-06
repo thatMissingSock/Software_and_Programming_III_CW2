@@ -7,6 +7,12 @@ import java.util.Optional;
 
 // DNC - 30-03-26
 public record DivInstr(String label, int rDest, int rSrc1, int rSrc2) implements Instruction {
+    /**
+     * Instruction that divides rSrc1 by rSrc2 and stores the result in the destination register (rDest), will also throw
+     * a runtime error if divide by 0 is attempted
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rDest, rSrc1, rSrc2 as indices
+     */
 
     // Reflection Factory Constructor
     public DivInstr(String label, Object... operands) {

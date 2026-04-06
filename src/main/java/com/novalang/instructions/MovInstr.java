@@ -8,6 +8,11 @@ import java.util.Optional;
 // after testing, this is more akin to copying than actually moving registers (much like actual storage). It'll move it
 // from one register to another and the other storage will remain the same value untill it gets rewritten
 public record MovInstr(String label, int rDest, int rSrc) implements Instruction {
+    /**
+     * Instruction that copies and pastes a source register (rSrc) into a new register location (rDest)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rDest and rSrc as indices
+     */
 
     // Reflection Factory Constructor
     public MovInstr(String label, Object... operands) {

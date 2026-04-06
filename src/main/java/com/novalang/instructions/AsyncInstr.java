@@ -5,8 +5,13 @@ import com.novalang.compiler.Translator;
 
 import java.util.Optional;
 
-// DNC - 30-03-26
+
 public record AsyncInstr(String label, int targetPC) implements Instruction {
+    /**
+     * Instruction that starts a new virtual thread beginning execution at the target program counter (targetPC)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands contains the operand for the resolved pc counter as an INT
+     */
 
     // Reflection Factory Constructor
     public AsyncInstr(String label, Object... operands) {

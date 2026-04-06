@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record SleepInstr(String label, int milliseconds) implements Instruction {
+    /**
+     * Instruction that pauses the current thread for a specific time (in milliseconds)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing the sleep duration (in milliseconds) as a constant INT
+     */
 
     // Reflection Factory Constructor
     public SleepInstr(String label, Object... operands) {

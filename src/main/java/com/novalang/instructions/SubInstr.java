@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record SubInstr(String label, int rDest, int rSrc1, int rSrc2) implements Instruction {
+    /**
+     * Instruction that subtracts a register from another and inputs the output into a new location (rDest)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands an array containing all the necessary information of rSrc1, rSrc2 and rDest as indices
+     */
 
     // Reflection Factory Constructor
     public SubInstr(String label, Object... operands) {

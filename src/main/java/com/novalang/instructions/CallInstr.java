@@ -4,8 +4,12 @@ import com.novalang.vm.ProgramContext;
 import com.novalang.compiler.Translator;
 
 import java.util.Optional;
-// DNC - 30-03-26
 public record CallInstr(String label, int targetPC) implements Instruction {
+    /**
+     * Instruction that pushes the return address onto the call stack and jumps to the target program counter (targetPC)
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing the resolved target PC as an Integer
+     */
 
     // Reflection Factory Constructor
     public CallInstr(String label, Object... operands) {

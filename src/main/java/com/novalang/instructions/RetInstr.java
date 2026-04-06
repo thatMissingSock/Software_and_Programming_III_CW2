@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record RetInstr(String label) implements Instruction {
+    /**
+     * Instruction that returns from a subroutine by popping the return address from the call stack. Additionally, if
+     * the call stack is empty, it halts the current thread
+     * @param label the label associated with this instruction line, empty string if none
+     */
 
     // Reflection Factory Constructor
     public RetInstr(String label, Object... operands) {

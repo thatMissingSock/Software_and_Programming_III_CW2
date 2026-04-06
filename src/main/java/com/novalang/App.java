@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.LogManager;
 
-
 /**
  * Main application entry point responsible for the Dependency Injection (DI) wiring.
  * Fulfills the "DI via factory" requirement for the coursework.

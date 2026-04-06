@@ -6,6 +6,11 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record JnzInstr(String label, int rCond, int targetPC) implements Instruction {
+    /**
+     * Instruction that jumps to the target program counter (targetPC) if the condition register (rCond) is not zero
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rCond as a register index and the new *hit* pc index
+     */
 
     // Reflection Factory Constructor: takes rCond (reg index) and targetPC (resolved index)
 

@@ -5,8 +5,13 @@ import com.novalang.compiler.Translator; // For operand validation
 
 import java.util.Optional;
 
-// DNC - 30-03-26
+
 public record AddInstr(String label, int rDest, int rSrc1, int rSrc2) implements Instruction {
+    /**
+     * Instruction that takes in two registers (Src1 & Src2) and inputs the outcome into the destination register (rDest).
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands an array containing all the necessary information of rSrc1, rSrc2 and rDest as indices
+     */
 
     // Reflection Factory Constructor (for Translator)
     public AddInstr(String label, Object... operands) {

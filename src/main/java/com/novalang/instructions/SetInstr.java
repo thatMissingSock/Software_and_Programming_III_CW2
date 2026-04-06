@@ -6,6 +6,12 @@ import com.novalang.compiler.Translator;
 import java.util.Optional;
 
 public record SetInstr(String label, int rDest, int constant) implements Instruction {
+    /**
+     * Instruction that sets the destination register (rDest) to a constant integer
+     * @param label the label associated with this instruction line, empty string if none
+     * @param operands the operands array containing rDest as a register index and also contains the newly created constant
+     *                 value
+     */
 
     // Reflection Factory Constructor: takes rDest (reg index) and x (constant value)
     public SetInstr(String label, Object... operands) {
